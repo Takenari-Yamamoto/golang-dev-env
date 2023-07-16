@@ -38,9 +38,9 @@ func main() {
 		w.Write([]byte("Hello, World!"))
 	})
 
+	log.Default().Println("Server started on port: 8080")
 	err = http.ListenAndServe(":8080", nil)
 	if err != nil {
 		log.Fatal("failed to serve: ", err)
 	}
-	log.Default().Println("Server started on port: 8080")
 }
